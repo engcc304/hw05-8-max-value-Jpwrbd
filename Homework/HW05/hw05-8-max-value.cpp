@@ -22,31 +22,21 @@
 */
 
 #include <stdio.h>
-int main()
-{
-    int a1 = 0, a2 = 0, a3 = 0;
-    printf("Input[1]: ");
-    scanf("%d", &a1);
-    printf("Input[2]: ");
-    scanf("%d", &a2);
-    printf("Input[3]: ");
-    scanf("%d", &a3);
-    printf("Output: ");
-    if (a1 > a2 && a1 > a3)
-    {
-        printf("1st Number = %d ", a1);
-        if (a2 > a3)
-            printf("1st Number = %d %d ", a2, a3);
-        else
-            printf("1st Number = %d %d ", a2, a3);
-    }
-    else if (a2 > a1 && a2 > a3)
-    {
-        printf("%d ", a2);
-        if (a1 > a3)
-            printf("%d %d ", a1, a3);
-        else
-            printf("%d %d ", a3, a1);
+
+int main() {
+    int num1, num2, num3;
+    printf("Test case:\n\t");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("Output:\n");
+    printf("\t1st Number = %d\n", num1);
+    printf("\t2nd Number = %d\n", num2);
+    printf("\t3rd Number = %d\n", num3);
+    if (num1 > num2 && num1 > num3) {
+        printf("The 1st Number is the greatest among three\n");
+    } else if (num2 > num1 && num2 > num3) {
+        printf("The 2nd Number is the greatest among three\n");
+    } else {
+        printf("The 3rd Number is the greatest among three\n");
     }
     return 0;
 }
